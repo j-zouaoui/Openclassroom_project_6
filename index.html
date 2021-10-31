@@ -5,10 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OpenClassRoom_project_6</title>
+    <link rel="icon" href="images/logo.png" />
     <link rel="stylesheet" href="styles/style.css" />
   </head>
-
-
 
   <body>
     <!--page web header-->
@@ -21,7 +20,6 @@
         </ul>
       </nav>
     </header>
-
 
     <!--movies to be watched section-->
     <section class="must_be_watched">
@@ -36,28 +34,60 @@
       </div>
     </section>
 
-
-
-    <!--best movies categories section-->
+    <!--best  movies categories section-->
     <section class="categories_container">
       <!--header section to show categories titles-->
       <header class="categories_header">
         <h1 class="categories_header_text">Film les meiux notés</h1>
       </header>
+
       <!--container holding movies picture and button allowing to change the display picture of movies-->
-      <div class="categories_images_contianer">
-        <button class="display_button">
+      <div class="slider_contianer">
+        <!-- button to move left (previous button)-->
+        <button class="display_button" onclick="previous('box_1')">
           <img
             class="displayed_image_button"
             src="images/arrow-left.png"
             alt="move left button"
           />
         </button>
-        <div class="movie_picture_container">film 1</div>
-        <div class="movie_picture_container">film 2</div>
-        <div class="movie_picture_container">film 3</div>
-        <div class="movie_picture_container">film 4</div>
-        <button class="display_button">
+
+        <!--image de film 1 -->
+        <div class="image_box">
+          <img
+            src="images/best_movies/best_movies_1.jpg"
+            alt="film 1"
+            class="slider-img-BM-box1"
+          />
+        </div>
+        <!--image de film 2 -->
+        <div class="image_box">
+          <img
+            src="images/best_movies/best_movies_2.jpg"
+            alt="film 1"
+            class="slider-img-BM-box2"
+          />
+        </div>
+        <!--image de film 3 -->
+        <div class="image_box">
+          <img
+            src="images/best_movies/best_movies_3.jpg"
+            alt="film 1"
+            class="slider-img-BM-box3"
+          />
+        </div>
+        <!--image de film 4 -->
+        <div class="image_box">
+          <img
+            src="images/best_movies/best_movies_4.jpg"
+            alt="film 1"
+            class="slider-img-BM-box4"
+          />
+        </div>
+
+        <!-- button to move right (next button)-->
+
+        <button class="display_button" onclick="next('box_1')">
           <img
             class="displayed_image_button"
             src="images/arrow-right.png"
@@ -65,96 +95,198 @@
           />
         </button>
       </div>
-
-
-
-      <!-- movies categories 1 section-->
-    <section class="categories_container">
-      <!--header section to show categories titles-->
-      <header class="categories_header">
-        <h1 class="categories_header_text">Film les meiux notés</h1>
-      </header>
-      <!--container holding movies picture and button allowing to change the display picture of movies-->
-      <div class="categories_images_contianer">
-        <button class="display_button">
-          <img
-            class="displayed_image_button"
-            src="images/arrow-left.png"
-            alt="move left button"
-          />
-        </button>
-        <div class="movie_picture_container">film 1</div>
-        <div class="movie_picture_container">film 2</div>
-        <div class="movie_picture_container">film 3</div>
-        <div class="movie_picture_container">film 4</div>
-        <button class="display_button">
-          <img
-            class="displayed_image_button"
-            src="images/arrow-right.png"
-            alt="move left button"
-          />
-        </button>
-      </div>
-
-
-
-      <!--movies categories 3 section-->
-    <section class="categories_container">
-      <!--header section to show categories titles-->
-      <header class="categories_header">
-        <h1 class="categories_header_text">Film les meiux notés</h1>
-      </header>
-      <!--container holding movies picture and button allowing to change the display picture of movies-->
-      <div class="categories_images_contianer">
-        <button class="display_button">
-          <img
-            class="displayed_image_button"
-            src="images/arrow-left.png"
-            alt="move left button"
-          />
-        </button>
-        <div class="movie_picture_container">film 1</div>
-        <div class="movie_picture_container">film 2</div>
-        <div class="movie_picture_container">film 3</div>
-        <div class="movie_picture_container">film 4</div>
-        <button class="display_button">
-          <img
-            class="displayed_image_button"
-            src="images/arrow-right.png"
-            alt="move left button"
-          />
-        </button>
-      </div>
-      
-
-      <!-- movies categories 4 section-->
-    <section class="categories_container">
-      <!--header section to show categories titles-->
-      <header class="categories_header">
-        <h1 class="categories_header_text">Film les meiux notés</h1>
-      </header>
-      <!--container holding movies picture and button allowing to change the display picture of movies-->
-      <div class="categories_images_contianer">
-        <button class="display_button">
-          <img
-            class="displayed_image_button"
-            src="images/arrow-left.png"
-            alt="move left button"
-          />
-        </button>
-        <div class="movie_picture_container">film 1</div>
-        <div class="movie_picture_container">film 2</div>
-        <div class="movie_picture_container">film 3</div>
-        <div class="movie_picture_container">film 4</div>
-        <button class="display_button">
-          <img
-            class="displayed_image_button"
-            src="images/arrow-right.png"
-            alt="move left button"
-          />
-        </button>
-      </div>
-      
     </section>
+
+    <!--action movies categories section-->
+    <section class="categories_container">
+      <!--header section to show categories titles-->
+      <header class="categories_header">
+        <h1 class="categories_header_text">Film d'action</h1>
+      </header>
+
+      <!--container holding movies picture and button allowing to change the display picture of movies-->
+      <div class="slider_contianer">
+        <!-- button to move left (previous button)-->
+        <button class="display_button" onclick="previous('box_2')">
+          <img
+            class="displayed_image_button"
+            src="images/arrow-left.png"
+            alt="move left button"
+          />
+        </button>
+
+        <!--image de film 1 -->
+        <div class="image_box">
+          <img
+            src="images/actions/action-1.jpg"
+            alt="film 1"
+            class="slider-img-AM-box1"
+          />
+        </div>
+        <!--image de film 2 -->
+        <div class="image_box">
+          <img
+            src="images/actions/action-2.jpg"
+            alt="film 1"
+            class="slider-img-AM-box2"
+          />
+        </div>
+        <!--image de film 3 -->
+        <div class="image_box">
+          <img
+            src="images/actions/action-3.jpg"
+            alt="film 1"
+            class="slider-img-AM-box3"
+          />
+        </div>
+        <!--image de film 4 -->
+        <div class="image_box">
+          <img
+            src="images/actions/action-4.jpg"
+            alt="film 1"
+            class="slider-img-AM-box4"
+          />
+        </div>
+
+        <!-- button to move right (next button)-->
+
+        <button class="display_button" onclick="next('box_2')">
+          <img
+            class="displayed_image_button"
+            src="images/arrow-right.png"
+            alt="move left button"
+          />
+        </button>
+      </div>
+    </section>
+
+    <!--aventures movies categories section-->
+    <section class="categories_container">
+      <!--header section to show categories titles-->
+      <header class="categories_header">
+        <h1 class="categories_header_text">Film d'aventure</h1>
+      </header>
+
+      <!--container holding movies picture and button allowing to change the display picture of movies-->
+      <div class="slider_contianer">
+        <!-- button to move left (previous button)-->
+        <button class="display_button" onclick="previous('box_3')">
+          <img
+            class="displayed_image_button"
+            src="images/arrow-left.png"
+            alt="move left button"
+          />
+        </button>
+
+        <!--image de film 1 -->
+        <div class="image_box">
+          <img
+            src="images/aventures/aventures-1.jpg"
+            alt="film 1"
+            class="slider-img-AV-box1"
+          />
+        </div>
+        <!--image de film 2 -->
+        <div class="image_box">
+          <img
+            src="images/aventures/aventures-2.jpg"
+            alt="film 1"
+            class="slider-img-AV-box2"
+          />
+        </div>
+        <!--image de film 3 -->
+        <div class="image_box">
+          <img
+            src="images/aventures/aventures-3.jpg"
+            alt="film 1"
+            class="slider-img-AV-box3"
+          />
+        </div>
+        <!--image de film 4 -->
+        <div class="image_box">
+          <img
+            src="images/aventures/aventures-4.jpg"
+            alt="film 1"
+            class="slider-img-AV-box4"
+          />
+        </div>
+
+        <!-- button to move right (next button)-->
+
+        <button class="display_button" onclick="next('box_3')">
+          <img
+            class="displayed_image_button"
+            src="images/arrow-right.png"
+            alt="move left button"
+          />
+        </button>
+      </div>
+    </section>
+
+    <!--comedi movies categories section-->
+    <section class="categories_container">
+      <!--header section to show categories titles-->
+      <header class="categories_header">
+        <h1 class="categories_header_text">Film de comedi</h1>
+      </header>
+
+      <!--container holding movies picture and button allowing to change the display picture of movies-->
+      <div class="slider_contianer">
+        <!-- button to move left (previous button)-->
+        <button class="display_button" onclick="previous('box_4')">
+          <img
+            class="displayed_image_button"
+            src="images/arrow-left.png"
+            alt="move left button"
+          />
+        </button>
+
+        <!--image de film 1 -->
+        <div class="image_box">
+          <img
+            src="images/comedi/comedi-1.jpg"
+            alt="film 1"
+            class="slider-img-CO-box1"
+          />
+        </div>
+        <!--image de film 2 -->
+        <div class="image_box">
+          <img
+            src="images/comedi/comedi-2.jpg"
+            alt="film 1"
+            class="slider-img-CO-box2"
+          />
+        </div>
+        <!--image de film 3 -->
+        <div class="image_box">
+          <img
+            src="images/comedi/comedi-3.jpg"
+            alt="film 1"
+            class="slider-img-CO-box3"
+          />
+        </div>
+        <!--image de film 4 -->
+        <div class="image_box">
+          <img
+            src="images/comedi/comedi-4.jpg"
+            alt="film 1"
+            class="slider-img-CO-box4"
+          />
+        </div>
+
+        <!-- button to move right (next button)-->
+
+        <button class="display_button" onclick="next('box_4')">
+          <img
+            class="displayed_image_button"
+            src="images/arrow-right.png"
+            alt="move left button"
+          />
+        </button>
+      </div>
+    </section>
+
+    <!-- script to manage button output bihaviour-->
+    <script src="js/main.js"></script>
   </body>
 </html>

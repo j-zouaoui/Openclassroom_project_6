@@ -92,7 +92,7 @@
   margin-right: auto;
   height: 30px;
 }
-.categories_images_contianer {
+.slider_contianer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -115,7 +115,7 @@
   border: none;
   outline: none;
 }
-.movie_picture_container {
+.image_box {
   box-sizing: border-box;
   height: 100%;
   width: 18%;
@@ -123,4 +123,8 @@
   border: solid;
   border-width: 5px;
   border-color: black;
+}
+.image_box img {
+  height: 100%;
+  width: 100%;
 }
