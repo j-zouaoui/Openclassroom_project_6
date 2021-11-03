@@ -18,6 +18,10 @@ var sliderImageBox_14 = document.querySelector(".slider-img-CO-box2");
 var sliderImageBox_15 = document.querySelector(".slider-img-CO-box3");
 var sliderImageBox_16 = document.querySelector(".slider-img-CO-box4");
 
+var boxlist =[[".slider-img-BM-box1", ".slider-img-BM-box2", ".slider-img-BM-box3", ".slider-img-BM-box4"],
+              [".slider-img-AM-box1", ".slider-img-AM-box2", ".slider-img-AM-box3",".slider-img-AM-box4"],
+              [".slider-img-AV-box1",".slider-img-AV-box2",".slider-img-AV-box3",".slider-img-AV-box4"],
+              [".slider-img-CO-box1", ".slider-img-CO-box2", ".slider-img-CO-box3", ".slider-img-CO-box4"]]
 
 
 var bestMovieImageList = ["images/best_movies/best_movies_1.jpg",
@@ -96,29 +100,47 @@ function next(div){
 }
 
 function setSCRimage(div){
-if (div =='box_1'){
+switch(div ){
+    case 'box_1':       
     var action_1 = sliderImageBox_1.setAttribute('src', bestMovieImageList[counter]);
     var action_2 = sliderImageBox_2.setAttribute('src', bestMovieImageList[counter+1]);
     var action_3 = sliderImageBox_3.setAttribute('src', bestMovieImageList[counter+2]);
     var action_4 = sliderImageBox_4.setAttribute('src', bestMovieImageList[counter+3]);
-}else if (div =='box_2') {
+    break;
+    case 'box_2': 
     var action_1 = sliderImageBox_5.setAttribute('src', actionMovieImageList[counter]);
     var action_2 = sliderImageBox_6.setAttribute('src', actionMovieImageList[counter+1]);
     var action_3 = sliderImageBox_7.setAttribute('src', actionMovieImageList[counter+2]);
-    var action_4 = sliderImageBox_8.setAttribute('src', actionMovieImageList[counter+3]);  
-}
-else if (div =='box_3') {
+    var action_4 = sliderImageBox_8.setAttribute('src', actionMovieImageList[counter+3]); 
+    break; 
+    case 'box_3':    
     var action_1 = sliderImageBox_9.setAttribute('src', aventuresMovieImageList[counter]);
     var action_2 = sliderImageBox_10.setAttribute('src', aventuresMovieImageList[counter+1]);
     var action_3 = sliderImageBox_11.setAttribute('src', aventuresMovieImageList[counter+2]);
     var action_4 = sliderImageBox_12.setAttribute('src', aventuresMovieImageList[counter+3]);  
-}else{
+    break;
+    case 'box_4':
     var action_1 = sliderImageBox_13.setAttribute('src', comediMovieImageList[counter]);
     var action_2 = sliderImageBox_14.setAttribute('src', comediMovieImageList[counter+1]);
     var action_3 = sliderImageBox_15.setAttribute('src', comediMovieImageList[counter+2]);
     var action_4 = sliderImageBox_16.setAttribute('src', comediMovieImageList[counter+3]); 
+
 }
     actions = [action_1, action_2, action_3, action_4];
     return actions
-
 }
+
+document.querySelectorAll(".image_box img").forEach(image =>{
+    image.onclick = () =>{
+        document.querySelector(".popup_div").style.display = 'block';
+        document.querySelector(" .popup_div img").src =
+         image.getAttribute('src');
+    }
+});
+document.querySelector('.popup_div span').onclick = ()=>{
+    document.querySelector(".popup_div").style.display = 'none';
+}
+
+
+
+

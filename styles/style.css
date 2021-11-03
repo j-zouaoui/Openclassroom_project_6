@@ -123,8 +123,91 @@
   border: solid;
   border-width: 5px;
   border-color: black;
+  transition: 0.5s;
 }
+.image_box:hover {
+  transform: scale(1.15);
+  z-index: 2;
+}
+
 .image_box img {
   height: 100%;
   width: 100%;
+}
+
+/* popup image divisiotn style*/
+.popup_div {
+  display: none;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background: white;
+  position: fixed;
+  top: 310px;
+  left: 600px;
+  height: 400px;
+  width: 650px;
+  z-index: 50;
+}
+.popup_div_container_info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background: rgb(27, 25, 25);
+  height: 100%;
+  width: 100%;
+}
+
+.popup_image_container {
+  height: 380px;
+  width: 234px;
+  margin-left: 10px;
+  margin-right: 5px;
+}
+
+.popup_image_container img {
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+}
+.movies_details_infos {
+  border-radius: 10px;
+  height: 380px;
+  width: 400px;
+  margin-right: 5px;
+}
+
+.popup_div_container_info span {
+  font-weight: bolder;
+  color: rgb(236, 12, 12);
+  cursor: pointer;
+}
+.general_informations {
+  background: rgb(27, 25, 25);
+  box-sizing: border-box;
+  border: yellow solid;
+  border-width: 1px;
+  border-radius: 10px;
+  height: 380;
+  width: 400px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.movies_description {
+  background: rgb(27, 25, 25);
+  box-sizing: border-box;
+  border: yellow solid;
+  border-width: 1px;
+  border-radius: 10px;
+  height: 80px;
+  width: 400px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 10px;
+}
+h6 {
+  color: white;
+  margin: 5px;
+  padding: 5px;
 }
