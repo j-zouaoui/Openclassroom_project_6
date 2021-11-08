@@ -142,10 +142,10 @@
   border-radius: 10px;
   background: white;
   position: fixed;
-  top: 310px;
-  left: 600px;
-  height: 400px;
-  width: 650px;
+  top: 210px;
+  left: 500px;
+  height: 500px;
+  width: 810px;
   z-index: 50;
 }
 .popup_div_container_info {
@@ -160,8 +160,8 @@
 }
 
 .popup_image_container {
-  height: 380px;
-  width: 234px;
+  height: 480px;
+  width: 296px;
   margin-left: 10px;
   margin-right: 5px;
 }
@@ -173,8 +173,8 @@
 }
 .movies_details_infos {
   border-radius: 10px;
-  height: 380px;
-  width: 400px;
+  height: 480px;
+  width: 500px;
   margin-right: 5px;
 }
 
@@ -189,8 +189,8 @@
   border: yellow solid;
   border-width: 1px;
   border-radius: 10px;
-  height: 380;
-  width: 400px;
+  height: 330;
+  width: 500px;
   margin-left: 5px;
   margin-right: 5px;
 }
@@ -200,13 +200,15 @@
   border: yellow solid;
   border-width: 1px;
   border-radius: 10px;
-  height: 80px;
-  width: 400px;
+  height: 130px;
+  width: 500px;
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 10px;
 }
 h6 {
+  display: block;
+  vertical-align: middle;
   color: white;
   margin: 5px;
   padding: 5px;
