@@ -40,7 +40,8 @@
   border-width: 5px;
   border-color: black;
 }
-.video_container {
+
+.to_be_watchedideo_container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -48,6 +49,7 @@
   margin-left: 0;
   margin-right: 0;
 }
+
 .info_container {
   margin-left: 10px;
   height: 100%;
@@ -67,12 +69,18 @@
   border-radius: 50px;
   cursor: pointer;
 }
+
 .video_image_to_watch {
-  background-image: url("../images/movie_exemple_pour_test.jpg");
-  background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100%;
   width: 60%;
+}
+.to_be_watched {
+  display: inline-block;
+  margin: 0;
+  height: 100%;
+  width: 100%;
 }
 
 /*end of movie that must be watched and its item css styles*/

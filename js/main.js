@@ -1,3 +1,4 @@
+var sliderImageBox_0 = document.querySelector(".to_be_watched")
 var sliderImageBox_1 = document.querySelector(".slider-img-BM-box1");
 var sliderImageBox_2 = document.querySelector(".slider-img-BM-box2");
 var sliderImageBox_3 = document.querySelector(".slider-img-BM-box3");
@@ -20,8 +21,6 @@ var sliderImageBox_16 = document.querySelector(".slider-img-CO-box4");
 
 /* actions list */
 var actions = [];
-
-
                    
 /* ajax request to get infromation of best movies*/
 var xhr_best_movies = new XMLHttpRequest(); 
@@ -29,6 +28,9 @@ xhr_best_movies.open('GET', 'http://localhost:8000/api/v1/titles/?sort_by=-imdb_
 xhr_best_movies.onreadystatechange = function() {
   if (xhr_best_movies.readyState === 4) {
     var reponse = JSON.parse(xhr_best_movies.responseText);
+    sliderImageBox_0.setAttribute('src', (reponse.results[0].image_url));
+    sliderImageBox_0.setAttribute('id', (reponse.results[0].id));
+
     sliderImageBox_1.setAttribute('src', (reponse.results[0].image_url));
     sliderImageBox_1.setAttribute('id', (reponse.results[0].id));
 
